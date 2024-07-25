@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!lovely girl</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="tubiao.ico" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let clickCount = 0;
+            const correctPassword = '我爱祁煜';
+            document.body.addEventListener('click', function () {
+                clickCount++;
+                if (clickCount === 10) {
+                    alert('保镖小姐是不是过不去鸭，你输入“我爱祁煜”就放你过去');
+                    const userPassword = prompt('束手就擒吧，说爱我哈哈哈哈：');
+                    if (userPassword === correctPassword) {
+                        window.location.href = 'index1.html'; // 跳转到另一个界面
+                    } else {
+                        alert('要说我爱祁煜');
+                        const userPassword1 = prompt('再输入错误你就是不爱我了：');
+                        if (userPassword1 === correctPassword) {
+                            window.location.href = 'index1.html'; // 跳转到另一个界面
+                        }
+                        else {
+                            alert('你就是不爱我了！坏女人！！');
+                        }
+
+                    }
+                    clickCount = 0; // 重置计数器
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <img src="qq1.png" alt="祁煜祝我生日快乐" class="qiqiu1">
+        <img src="qq2.png" alt="祁煜祝我生日快乐" class="qiqiu2">
+        <img src="qq1.png" alt="祁煜祝我生日快乐" class="qiqiu3">
+        <img src="qq2.png" alt="祁煜祝我生日快乐" class="qiqiu4">
+        <img src="qq1.png" alt="祁煜祝我生日快乐" class="qiqiu5">
+        <img src="qq2.png" alt="祁煜祝我生日快乐" class="qiqiu6">
+        <img src="aixin.png" alt="祁煜祝我生日快乐" class="qiqiu7">
+        <img src="aixin.png" alt="祁煜祝我生日快乐" class="qiqiu8">
+        <div class="container">
+            <a href="index.html" class="button-link">点我鸭保镖小姐</a>
+            <img src="qy1.png" alt="祁煜祝我生日快乐" class="qy1">
+
+        </div>
+        <button id="playButton">播放音乐</button>
+        <audio id="musicPlayer" src="background-music.mp3" loop="true"></audio>
+        <script src="bgm.js"></script>
+</body>
+
+</html>

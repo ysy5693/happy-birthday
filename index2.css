@@ -1,0 +1,254 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* 初始状态：完全透明 */
+    }
+
+    to {
+        opacity: 1;
+        /* 最终状态：完全不透明 */
+    }
+}
+
+@keyframes fadeAndScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    background-color: #c9a1fde0;
+
+}
+
+.img-container {
+    animation: rotate 2s infinite
+}
+
+#star1 {
+    width: 20%;
+    transform: scaleX(-1);
+}
+
+#star2 {
+    width: 15%;
+
+}
+
+#star3 {
+    width: 20%;
+    transform: scaleX(-1);
+}
+
+#star4 {
+    width: 10%;
+    transform: scaleX(-1);
+}
+
+#star5 {
+    width: 15%;
+    transform: scaleX(1);
+}
+
+#star6 {
+    width: 15%;
+
+}
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gift-container img {
+    margin: 0 50px;
+    /* 设置图片之间的间距 */
+    width: 30%;
+}
+
+#gift1 {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    /* 添加过渡效果 */
+    position: relative;
+    /* 设置图片定位 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+}
+
+#gift1:hover {
+    transform: translateY(-10px);
+    /* 向上移动10像素 */
+    opacity: 1;
+    /* 变透明 */
+    animation: fadeAndScale 0.5s ease forwards;
+    /* 添加动画 */
+}
+
+#gift2 {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    /* 添加过渡效果 */
+    position: relative;
+    /* 设置图片定位 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+
+}
+
+#gift2:hover {
+    transform: translateY(-10px);
+    /* 向上移动10像素 */
+    opacity: 1;
+    /* 不变透明 */
+    animation: fadeAndScale 0.5s ease forwards;
+    /* 添加动画 */
+}
+
+#gift3 {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    /* 添加过渡效果 */
+    position: relative;
+    /* 设置图片定位 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+}
+
+#gift3:hover {
+    transform: translateY(-10px);
+    /* 向上移动10像素 */
+    opacity: 1;
+    /* 不变透明 */
+    animation: fadeAndScale 0.5s ease forwards;
+    /* 添加动画 */
+}
+
+
+
+#qyp {
+    position: absolute;
+    left: 80%;
+    top: 65%;
+    width: 15%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#text {
+    position: absolute;
+    top: 90%;
+    left: 43%;
+    font-size: 18px;
+    /* 设置字体大小 */
+    color: #fd6cb7;
+    /* 设置字体颜色 */
+    text-align: center;
+    /* 设置文本对齐方式 */
+    background-color: rgb(255, 255, 255，0.4);
+    /* 设置背景颜色和透明度 */
+    padding: 10px;
+    /* 设置内边距 */
+    border-radius: 5px;
+    /* 设置圆角边框 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* 设置阴影效果 */
+
+}
+
+.new-text {
+    color: rgb(22, 21, 21);
+    /* 文字颜色 */
+    font-size: 17px;
+    /* 文字大小 */
+    margin: 15px;
+    /* 上边距 */
+    text-align: center;
+    /* 文字居中 */
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    left: 62%;
+    top: 75%;
+    width: 15%;
+    padding: 10px;
+    /* 添加内边距 */
+    background-color: #fffac456;
+    /* 添加背景颜色 */
+    border-radius: 10px;
+    /* 添加圆角 */
+}
+
+.show-button {
+    background-color: #9753b9;
+    /* 背景颜色 */
+    border: none;
+    /* 去掉边框 */
+    color: white;
+    /* 文字颜色 */
+
+    /* 内边距 */
+    text-align: center;
+    /* 文字居中 */
+    text-decoration: none;
+    /* 去掉下划线 */
+    display: inline-block;
+    /* 显示为内联块 */
+    font-size: 20px;
+    /* 字体大小 */
+    padding-top: 10px;
+    /* 内边距 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+    border-radius: 12px;
+    /* 圆角边框 */
+    transition: background-color 0.3s ease;
+    /* 背景颜色过渡效果 */
+    position: absolute;
+    left: 42.5%;
+    top: 45%;
+
+
+    width: 250px;
+    /* 设置按钮宽度为150像素 */
+    height: 40px;
+    /* 设置按钮高度为50像素 */
+
+
+}
+
+.show-button:hover {
+    background-color: #8230a74f;
+    /* 鼠标悬停时的背景颜色 */
+}
+
+.show-button:active {
+    background-color: #3e0e63a7;
+    /* 按钮被点击时的背景颜色 */
+
+}
